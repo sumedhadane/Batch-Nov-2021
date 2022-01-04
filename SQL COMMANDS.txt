@@ -1,0 +1,80 @@
+			DDL COMMAND
+	##########################################
+1)CREATE  .......................//TO CREATE TABLE OR DATABASE
+
+SYNTAX=>  Create database  [database_name]
+
+EX::CREATE DATABASE BATCH_NOV_21
+	
+SYNTAX= >  CREATE TABLE  [Tablename] 
+	( col1 name Datatype(size),col2 name Datatype(size), col3 name Datatype(size),)
+
+EX::	CREATE TABLE STUDENT_INFO(rollno INT,
+	student_name CHAR(45),city CHAR(30),state CHAR(45),
+	contactno VARCHAR(10),admission_date DATE)
+
+2) DROP.........//TO DELETE DATABASE OR TABLE  ALONG WITH ITS STRUCTURE
+
+SYNTAX=> DROP DATABASE  [DATABASE_NAME]
+
+EX::> DROP DATABASE SUMEDHA
+
+
+SYNTAX=> DROP TABLE [TABLE_NAME]
+
+EX::> DROP TABLE  SUMEDHA
+
+3) ALTER................//TO MODIFY OR CHANGE THE TABLE 
+
+SYNTAX=>  ALTER TABLE [TABLE_NAME] ADD COLUMN_NAME DATATYPE (SIZE)
+
+EX::> ALTER TABLE STUDENT_INFO
+	 ADD course_complete_date VARCHAR(35).............//TO ADD NEW COLUMN
+ 
+ALTER TABLE STUDENT_INFO
+ DROP COLUMN course_complete_date ..............// TO DROP COLUMN
+
+ ALTER TABLE STUDENT_INFO
+ ALTER COLUMN STATE CHAR(50) ...................///TO MODIFY COLUMN
+
+
+4)TRUNCATE............//FOR DELETE ALL DATA FROM TABLE
+
+SYNTAX=> TRUNCATE TABLE [TABLE_NAME]
+
+EX::> TRUNCATE TABLE  SUMEDHA
+
+5) RENAME.................//TO RENAME OR CHANGE THE NAME OF TABLE OR COLUMN
+
+SYNTAX=> TRUNCATE TABLE [TABLE_NAME]
+
+EX::> TRUNCATE TABLE  SUMEDHA
+
+
+@@@@@@@@@@@@@          19  NOV 2021  :: DML COMMAND       @@@@@@@@@@@@
+
+1) 	SELECT COMMAND............// TO SELECT  COLUMNS DATA FROM THE TABLE..
+SYNTAX => SELECT COL1,COL2,COL3,.........COL..n FROM [TABLENAME]
+
+EX ::=>SELECT ROLLNO,STUDENT_NAME,CITY FROM STUDENT_INFO
+
+	SELECT * FROM STUDENT_INFO.................// (WHERE * REPRESENTS ALL DATA FROM TABLE)
+		To select all columns  data from table
+
+
+2)	INSERT COMMAND............................// TO INSERT DATA INTO TABLE 
+SYNTAX => insert into [tablename] [col1,col2,col3,......col....N] values (1st value, 2nd value,3rd value)
+
+EX ::=>INSERT INTO [dbo].[STUDENT_INFO]
+	([rollno], [student_name], [city], [state], [contactno])
+	VALUES (101,'SUMEDHA','LATUR','MAHARASHTRA',7798466920)........//for insert 1 record
+
+
+INSERT INTO [dbo].[STUDENT_INFO]
+([rollno], [student_name], [city], [state], [contactno])
+VALUES (102,'SNEHA','PUNE','MAHARASHTRA',9730296112),
+		(103,'BALAJI','LATUR','MAHARASHTRA',9730296112),
+		(104,'BAPU','PUNE','MAHARASHTRA',9307880568),
+		(105,'BALAJI-AAI','PUNE','MAHARASHTRA',9730296112)............// to insert multiple records
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    20 NOV 21          $$$$$$$$$$$$$$$$$$$$
